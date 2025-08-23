@@ -1,0 +1,62 @@
+{
+  "name": "@aid-on/nextauth-providers",
+  "version": "0.1.0",
+  "description": "NextAuth.js authentication providers by Aid-On",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./line": {
+      "import": "./dist/line/index.js",
+      "require": "./dist/line/index.js",
+      "types": "./dist/line/index.d.ts"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aid-On/next-auth-providers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Aid-On/next-auth-providers/issues"
+  },
+  "homepage": "https://github.com/Aid-On/next-auth-providers#readme",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/**/*.ts"
+  },
+  "keywords": [
+    "nextauth",
+    "line",
+    "oauth",
+    "authentication",
+    "aid-on"
+  ],
+  "author": "Aid-On",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@aid-on/auth-providers": "^0.1.0"
+  },
+  "peerDependencies": {
+    "next-auth": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.40.0",
+    "@typescript-eslint/parser": "^8.40.0",
+    "eslint": "^9.34.0",
+    "next-auth": "^4.24.11",
+    "typescript": "^5.0.0"
+  }
+}
